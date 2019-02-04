@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bhanu.mini">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_action_name4"
+        android:label="Compose Email"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.bhanu.mini.LoginActivity"
+            android:label="Voice Based E-Mail"
+            android:noHistory="true">
+        </activity>
+        <activity android:name="com.bhanu.mini.VoiceEmailActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bhanu.mini.WelcomePage"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Voice Based E-Mail"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
